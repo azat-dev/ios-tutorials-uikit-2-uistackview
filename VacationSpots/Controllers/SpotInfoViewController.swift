@@ -54,7 +54,7 @@ class SpotInfoViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    // Clear background colors from labels and buttons
+    //     Clear background colors from labels and buttons
     for view in backgroundColoredViews {
       view.backgroundColor = .clear
     }
@@ -91,10 +91,18 @@ class SpotInfoViewController: UIViewController {
   }
   
   func updateWeatherInfoViews(hideWeatherInfo shouldHideWeatherInfo: Bool, animated: Bool) {
-    let newButtonTitle = shouldHideWeatherInfo ? "Show" : "Hide"
-    weatherHideOrShowButton.setTitle(newButtonTitle, for: .normal)
     
-    weatherInfoLabel.isHidden = shouldHideWeatherInfo
+    let updateViews = { [weak self] in
+      let newButtonTitle = shouldHideWeatherInfo ? "Show" : "Hide"
+      self?.weatherHideOrShowButton.setTitle(newButtonTitle, for: .normal)
+      self?.weatherInfoLabel.isHidden = shouldHideWeatherInfo
+    }
+    
+    if animated {
+      UIView.animate(withDuration: 0.3, animations: updateViews)
+    } else {
+      updateViews()
+    }
   }
   
   @IBAction func wikipediaButtonTapped(_ sender: UIButton) {
@@ -109,8 +117,8 @@ class SpotInfoViewController: UIViewController {
       guard
         let navigationController = segue.destination as? UINavigationController,
         let mapViewController = navigationController.topViewController as? MapViewController
-        else {
-          fatalError("Unexpected view hierarchy")
+      else {
+        fatalError("Unexpected view hierarchy")
       }
       mapViewController.locationToShow = vacationSpot.coordinate
       mapViewController.title = vacationSpot.name
@@ -118,8 +126,8 @@ class SpotInfoViewController: UIViewController {
       guard
         let navigationController = segue.destination as? UINavigationController,
         let ratingViewController = navigationController.topViewController as? RatingViewController
-        else {
-          fatalError("Unexpected view hierarchy")
+      else {
+        fatalError("Unexpected view hierarchy")
       }
       ratingViewController.vacationSpot = vacationSpot
     default:
