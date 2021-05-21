@@ -1,4 +1,4 @@
-# Word Scramble
+# VacationSpots
 
 The test project from [UIStackView Tutorial for iOS](https://www.raywenderlich.com/2198310-uistackview-tutorial-for-ios-introducing-stack-views) course.
 
