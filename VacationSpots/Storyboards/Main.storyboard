@@ -174,20 +174,25 @@
                                                     <action selector="weatherHideOrShowButtonTapped:" destination="uIW-zp-txd" eventType="touchUpInside" id="ddy-y0-jmP"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WHAT TO SEE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yK3-Tf-1ae">
-                                                <rect key="frame" x="20" y="133" width="105.5" height="19.5"/>
-                                                <color key="backgroundColor" red="0.58881118880000005" green="1" blue="0.58881118880000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="&lt;whatToSeeLabel&gt;" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rai-yh-ty5">
-                                                <rect key="frame" x="20" y="152.5" width="335" height="17"/>
-                                                <color key="backgroundColor" red="1" green="0.58823529409999997" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                <color key="textColor" red="0.2199999988079071" green="0.2199999988079071" blue="0.2199999988079071" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="m2u-bp-n4l">
+                                                <rect key="frame" x="20" y="133" width="335" height="36.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WHAT TO SEE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yK3-Tf-1ae">
+                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="19.5"/>
+                                                        <color key="backgroundColor" red="0.58881118880000005" green="1" blue="0.58881118880000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="&lt;whatToSeeLabel&gt;" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rai-yh-ty5">
+                                                        <rect key="frame" x="0.0" y="19.5" width="335" height="17"/>
+                                                        <color key="backgroundColor" red="1" green="0.58823529409999997" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                        <color key="textColor" red="0.2199999988079071" green="0.2199999988079071" blue="0.2199999988079071" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="NWp-5j-9dK">
                                                 <rect key="frame" x="20" y="189.5" width="149" height="19.5"/>
                                                 <subviews>
@@ -243,19 +248,17 @@
                                             <constraint firstItem="JGt-cb-Lyg" firstAttribute="top" secondItem="Xmo-bh-Un4" secondAttribute="bottom" constant="20" id="8fp-H3-3IN"/>
                                             <constraint firstItem="Xmo-bh-Un4" firstAttribute="leading" secondItem="3eM-SJ-893" secondAttribute="leadingMargin" id="AIQ-cH-lnm"/>
                                             <constraint firstItem="QTW-FT-Yyk" firstAttribute="bottom" secondItem="3eM-SJ-893" secondAttribute="bottomMargin" id="Afh-8u-J3f"/>
-                                            <constraint firstItem="rai-yh-ty5" firstAttribute="leading" secondItem="3eM-SJ-893" secondAttribute="leadingMargin" id="B4B-Jb-Vyn"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="QTW-FT-Yyk" secondAttribute="trailing" id="CFf-FS-NJX"/>
-                                            <constraint firstItem="NWp-5j-9dK" firstAttribute="top" secondItem="rai-yh-ty5" secondAttribute="bottom" constant="20" id="H8e-gJ-ezk"/>
+                                            <constraint firstItem="m2u-bp-n4l" firstAttribute="leading" secondItem="3eM-SJ-893" secondAttribute="leadingMargin" id="Dw9-4n-NZv"/>
                                             <constraint firstItem="QTW-FT-Yyk" firstAttribute="leading" secondItem="3eM-SJ-893" secondAttribute="leadingMargin" id="KVo-uA-cKc"/>
+                                            <constraint firstItem="NWp-5j-9dK" firstAttribute="top" secondItem="m2u-bp-n4l" secondAttribute="bottom" constant="20" id="Uaa-mk-QJE"/>
                                             <constraint firstItem="QTW-FT-Yyk" firstAttribute="top" secondItem="NWp-5j-9dK" secondAttribute="bottom" constant="20" id="VBz-bS-ob9"/>
-                                            <constraint firstItem="yK3-Tf-1ae" firstAttribute="leading" secondItem="3eM-SJ-893" secondAttribute="leadingMargin" id="Y1U-qR-6ED"/>
                                             <constraint firstItem="h9g-1Y-kSS" firstAttribute="trailing" secondItem="3eM-SJ-893" secondAttribute="trailingMargin" id="aCJ-Nb-ikH"/>
-                                            <constraint firstItem="yK3-Tf-1ae" firstAttribute="top" secondItem="h9g-1Y-kSS" secondAttribute="bottom" constant="20" id="kbL-i7-Kie"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="m2u-bp-n4l" secondAttribute="trailing" id="acV-0v-yGq"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="Xmo-bh-Un4" secondAttribute="trailing" id="klp-dl-T7h"/>
                                             <constraint firstItem="Ktb-bF-Vf4" firstAttribute="baseline" secondItem="JGt-cb-Lyg" secondAttribute="baseline" id="lf5-Vf-waJ"/>
-                                            <constraint firstItem="rai-yh-ty5" firstAttribute="trailing" secondItem="3eM-SJ-893" secondAttribute="trailingMargin" id="phi-hL-7nR"/>
-                                            <constraint firstItem="rai-yh-ty5" firstAttribute="top" secondItem="yK3-Tf-1ae" secondAttribute="bottom" id="rDC-tO-Cb1"/>
                                             <constraint firstItem="Ktb-bF-Vf4" firstAttribute="leading" secondItem="JGt-cb-Lyg" secondAttribute="trailing" constant="8" id="rYc-lx-bU0"/>
+                                            <constraint firstItem="m2u-bp-n4l" firstAttribute="top" secondItem="h9g-1Y-kSS" secondAttribute="bottom" constant="20" id="tOZ-qd-Iwi"/>
                                             <constraint firstItem="NWp-5j-9dK" firstAttribute="leading" secondItem="3eM-SJ-893" secondAttribute="leadingMargin" id="vic-PD-94z"/>
                                             <constraint firstItem="h9g-1Y-kSS" firstAttribute="leading" secondItem="3eM-SJ-893" secondAttribute="leadingMargin" id="vuk-ae-7it"/>
                                             <constraint firstItem="h9g-1Y-kSS" firstAttribute="top" secondItem="JGt-cb-Lyg" secondAttribute="bottom" id="whV-fK-0xd"/>
@@ -289,12 +292,9 @@
                         <outlet property="whatToSeeLabel" destination="rai-yh-ty5" id="d1l-I7-evK"/>
                         <outlet property="whyVisitLabel" destination="7I7-MX-xvN" id="iou-lW-QOV"/>
                         <outletCollection property="backgroundColoredViews" destination="Ktb-bF-Vf4" collectionClass="NSMutableArray" id="Myf-ft-dh5"/>
-                        <outletCollection property="backgroundColoredViews" destination="yK3-Tf-1ae" collectionClass="NSMutableArray" id="zun-a6-EPP"/>
                         <outletCollection property="backgroundColoredViews" destination="JGt-cb-Lyg" collectionClass="NSMutableArray" id="ODB-Zm-F42"/>
                         <outletCollection property="backgroundColoredViews" destination="h9g-1Y-kSS" collectionClass="NSMutableArray" id="UEm-HF-9YW"/>
-                        <outletCollection property="backgroundColoredViews" destination="rai-yh-ty5" collectionClass="NSMutableArray" id="iuZ-J8-iw1"/>
                         <outletCollection property="headingLabels" destination="JGt-cb-Lyg" collectionClass="NSMutableArray" id="qSs-f9-qyA"/>
-                        <outletCollection property="headingLabels" destination="yK3-Tf-1ae" collectionClass="NSMutableArray" id="StY-8R-cx1"/>
                         <outletCollection property="backgroundColoredViews" destination="vi1-Tq-gH0" collectionClass="NSMutableArray" id="dJY-4L-AQm"/>
                         <outletCollection property="backgroundColoredViews" destination="GPk-7c-5ID" collectionClass="NSMutableArray" id="FiJ-V6-vWs"/>
                         <outletCollection property="backgroundColoredViews" destination="k0z-xq-log" collectionClass="NSMutableArray" id="hIZ-a4-YDg"/>
@@ -304,6 +304,9 @@
                         <outletCollection property="headingLabels" destination="ORI-tY-KjD" collectionClass="NSMutableArray" id="oTB-Qc-s1y"/>
                         <outletCollection property="backgroundColoredViews" destination="ORI-tY-KjD" collectionClass="NSMutableArray" id="KED-Zr-uL7"/>
                         <outletCollection property="backgroundColoredViews" destination="7I7-MX-xvN" collectionClass="NSMutableArray" id="CKu-14-oWM"/>
+                        <outletCollection property="headingLabels" destination="yK3-Tf-1ae" collectionClass="NSMutableArray" id="StY-8R-cx1"/>
+                        <outletCollection property="backgroundColoredViews" destination="yK3-Tf-1ae" collectionClass="NSMutableArray" id="zun-a6-EPP"/>
+                        <outletCollection property="backgroundColoredViews" destination="rai-yh-ty5" collectionClass="NSMutableArray" id="iuZ-J8-iw1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e2p-XL-PCg" userLabel="First Responder" sceneMemberID="firstResponder"/>
